@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5A41DC" />
+    <title>Enterprise Sales Platform — Start</title>
+    <style>
+      :root {
+        --brand: #5a41dc;
+        --brand-dark: #4632b3;
+        --bg: #f4f3fb;
+        --card: #ffffff;
+        --ink: #1d1b33;
+        --muted: #6b6885;
+        --border: #e5e3f4;
+        --green: #1f9d5c;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+        background: linear-gradient(160deg, var(--bg) 0%, #e9e6fb 100%);
+        color: var(--ink);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: 680px;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .logo-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 22px;
+        box-shadow: 0 8px 20px rgba(90, 65, 220, 0.35);
+      }
+
+      .logo-name {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+
+      .logo-name small {
+        display: block;
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 36px 32px;
+        box-shadow: 0 24px 60px rgba(40, 30, 120, 0.14);
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      h1 span {
+        background: linear-gradient(90deg, var(--brand), #8b6ff0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 26px;
+      }
+
+      .launch {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px 20px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 10px 24px rgba(90, 65, 220, 0.4);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .launch:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(90, 65, 220, 0.48);
+      }
+
+      .hint {
+        margin-top: 14px;
+        font-size: 12.5px;
+        color: var(--muted);
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      .hint code {
+        background: #f0eefa;
+        color: var(--brand-dark);
+        padding: 2px 7px;
+        border-radius: 6px;
+        font-family: Consolas, monospace;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .step {
+        background: #faf9ff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px 12px;
+        text-align: center;
+      }
+
+      .step b {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 4px;
+      }
+
+      .step p {
+        font-size: 11.5px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .status {
+        margin-top: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 4px rgba(31, 157, 92, 0.15);
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 520px) {
+        .card {
+          padding: 26px 20px;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="logo">
+        <div class="logo-mark">ES</div>
+        <div class="logo-name">
+          Enterprise Sales Platform
+          <small>CRM · Sales · POS · Inventory</small>
+        </div>
+      </div>
+
+      <div class="card">
+        <h1>Welcome to your <span>Sales Platform</span></h1>
+        <p class="lead">
+          Everything you need to run your business — customers, leads, quotations,
+          orders, point of sale, inventory, invoices and reports — all in one place.
+        </p>
+
+        <div class="launch">Double-click “Start Platform.bat”</div>
+        <p class="hint">
+          In your project folder, find <code>Start Platform.bat</code> and
+          double-click it. It starts the server and opens the app for you —
+          no command line needed.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <b>1. Double-click</b>
+            <p>Open <code>Start Platform.bat</code> in the project folder</p>
+          </div>
+          <div class="step">
+            <b>2. Sit back</b>
+            <p>Wait a moment while the app powers up</p>
+          </div>
+          <div class="step">
+            <b>3. Go to work</b>
+            <p>Your browser opens the platform automatically</p>
+          </div>
+        </div>
+
+        <div class="status">
+          <span class="dot"></span>
+          Ready when you are — click to launch
+        </div>
+      </div>
+
+      <footer>Enterprise Sales Platform · Friendly Start Page</footer>
+    </div>
+  </body>
+</html>

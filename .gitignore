@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Test
+coverage/
+.vitest/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+testsprite_tests\tmp\config.json
+testsprite_tests/
+
+# Source reference documents & design assets
+Enterprise\ Sales\ Platform\ SPA\ Master\ Prompt.docx
+UI/

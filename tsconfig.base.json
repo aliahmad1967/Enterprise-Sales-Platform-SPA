@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["apps/web/src/*"],
+      "@esp/design-system": ["packages/design-system/src/index.ts"],
+      "@esp/design-system/*": ["packages/design-system/src/*"],
+      "@esp/ui": ["packages/ui/src/index.ts"],
+      "@esp/ui/*": ["packages/ui/src/*"],
+      "@esp/types": ["packages/types/src/index.ts"],
+      "@esp/types/*": ["packages/types/src/*"],
+      "@esp/utils": ["packages/utils/src/index.ts"],
+      "@esp/utils/*": ["packages/utils/src/*"],
+      "@esp/hooks": ["packages/hooks/src/index.ts"],
+      "@esp/hooks/*": ["packages/hooks/src/*"],
+      "@esp/services": ["packages/services/src/index.ts"],
+      "@esp/services/*": ["packages/services/src/*"]
+    }
+  }
+}

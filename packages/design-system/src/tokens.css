@@ -1,0 +1,207 @@
+/* ============================================================
+   ESP Design Tokens — source of truth
+   Light palette extracted from the UI mockup (see docs/palette.md).
+   Dark palette derives from the brand navy family (#192846).
+   Do not override these values in app code; use semantic tokens.
+   ============================================================ */
+
+:root {
+  /* Brand */
+  --primary: #5a41dc;
+  --primary-hover: #4c35c4;
+  --primary-soft: #efedfb;
+  --primary-foreground: #ffffff;
+  --secondary: #7c3aed;
+  --secondary-soft: #f3eefc;
+  --secondary-foreground: #ffffff;
+  --navy: #192846;
+  --navy-2: #223352;
+  --navy-3: #2e4268;
+  --navy-foreground: #e4e9f4;
+  --navy-muted: #8b9bbd;
+
+  /* Surfaces */
+  --background: #f8f8f8;
+  --foreground: #1e293b;
+  --muted: #f1f4f9;
+  --muted-foreground: #64748b;
+  --surface: #ffffff;
+  --surface-2: #fafbfc;
+  --surface-3: #f4f6fa;
+  --border: #e5e7eb;
+  --border-strong: #cbd5e1;
+  --input: #d9dee7;
+
+  /* Status */
+  --success: #10b981;
+  --success-soft: #e7f8f1;
+  --danger: #ef4444;
+  --danger-soft: #fdecec;
+  --warning: #f59e0b;
+  --warning-soft: #fef5e7;
+  --info: #3b82f6;
+  --info-soft: #eaf2fe;
+
+  /* Focus ring */
+  --ring: #5a41dc;
+
+  /* Charts */
+  --chart-1: #5a41dc;
+  --chart-2: #57a2e5;
+  --chart-3: #56b5c6;
+  --chart-4: #09936c;
+  --chart-5: #f4be60;
+  --chart-6: #f9535f;
+  --chart-7: #7c3aed;
+  --chart-grid: #eef1f6;
+
+  /* Typography */
+  --font-sans: "Inter Variable", "Cairo Variable", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Cascadia Code", Menlo, Consolas,
+    monospace;
+
+  /* Radius — design language: 12px corners */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-full: 9999px;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgb(15 23 42 / 0.05);
+  --shadow-sm: 0 1px 3px rgb(15 23 42 / 0.06), 0 1px 2px rgb(15 23 42 / 0.04);
+  --shadow-md: 0 4px 12px rgb(15 23 42 / 0.08);
+  --shadow-lg: 0 12px 32px rgb(15 23 42 / 0.12);
+  --shadow-xl: 0 24px 48px rgb(15 23 42 / 0.16);
+  --shadow-primary: 0 6px 16px rgb(90 65 220 / 0.28);
+  --shadow-inset: inset 0 1px 0 rgb(255 255 255 / 0.6);
+
+  /* Z-index scale */
+  --z-sidebar: 30;
+  --z-navbar: 40;
+  --z-dropdown: 50;
+  --z-sticky: 60;
+  --z-drawer: 70;
+  --z-modal: 80;
+  --z-popover: 90;
+  --z-toast: 100;
+  --z-command: 110;
+}
+
+html[lang="ar"] {
+  --font-sans: "Cairo Variable", "Inter Variable", ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", sans-serif;
+}
+
+/* ---------- Dark theme ---------- */
+.dark {
+  --primary: #6a56e6;
+  --primary-hover: #7c6bf0;
+  --primary-soft: #26204d;
+  --primary-foreground: #ffffff;
+  --secondary: #8b5cf6;
+  --secondary-soft: #2c1f4d;
+  --secondary-foreground: #ffffff;
+
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --surface: #17233d;
+  --surface-2: #1b2947;
+  --surface-3: #223352;
+  --border: #2a3a5c;
+  --border-strong: #3b4f78;
+  --input: #33456a;
+
+  --success: #34d399;
+  --success-soft: #10322a;
+  --danger: #f87171;
+  --danger-soft: #3a1f22;
+  --warning: #fbbf24;
+  --warning-soft: #3a2f14;
+  --info: #60a5fa;
+  --info-soft: #16294d;
+
+  --ring: #7c6bf0;
+
+  --chart-grid: #26355a;
+
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.35);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.5);
+  --shadow-xl: 0 24px 48px rgb(0 0 0 / 0.6);
+  --shadow-primary: 0 6px 16px rgb(106 86 230 / 0.35);
+  --shadow-inset: inset 0 1px 0 rgb(255 255 255 / 0.05);
+}
+
+/* ---------- System-level shared rules ---------- */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--primary-soft);
+  color: var(--primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Thin scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--border-strong);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

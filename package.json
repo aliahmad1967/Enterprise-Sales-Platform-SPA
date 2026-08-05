@@ -1,0 +1,40 @@
+{
+  "name": "enterprise-sales-platform",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "@swc/core",
+      "fsevents"
+    ]
+  },
+  "scripts": {
+    "dev": "pnpm --filter @esp/web dev",
+    "dev:api": "pnpm --filter @esp/api dev",
+    "build": "pnpm --filter @esp/web build",
+    "preview": "pnpm --filter @esp/web preview",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "seed": "pnpm --filter @esp/web seed",
+    "qa": "pnpm typecheck && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.15.3",
+    "@vitejs/plugin-react": "^4.4.1",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-pwa": "^1.0.0",
+    "vitest": "^3.2.4"
+  }
+}
